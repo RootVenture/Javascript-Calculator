@@ -1,0 +1,91 @@
+html {
+	box-sizing: border-box;
+	line-height: 1.6;
+	font-family: "Nunito", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	line-height: 1.2;
+}
+
+#display {
+	background: #1155cc;
+	color: #fff;
+	font-weight: 300;
+}
+
+#history {
+	height: 8.5vh;
+	font-size: 1.5rem;
+	text-align: right;
+}
+
+#entry {
+	height: 18.5vh;
+	font-size: 3.5rem;
+}
+
+.big-btn {
+	width: 50%;
+}
+
+#buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+button {
+	width: 25%;
+	height: 14.5vh;
+	font-size: 2rem;
+	font-weight: 300;
+	border: 0;
+}
+
+.btn-primary-color {
+	background: #4e4e4e;
+	color: #fff;
+}
+
+.btn-primary-color {
+	background: #4e4e4e;
+	color: #fff;
+}
+
+.btn-primary-color:hover {
+	background: #2b2b2b;
+	color: #fff;
+}
+
+.btn-secondary-color {
+	background: #979797;
+	color: #fff;
+}
+
+.btn-secondary-color:hover {
+	background: #696969;
+	color: #fff;
+}
+.text__right {
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	padding-right: 5%;
+	padding-left: 5%;
+}
