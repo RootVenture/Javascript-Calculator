@@ -23,6 +23,7 @@ let temp = '';
 function display(e) {
   e.stopPropagation();
   if (e.target.value.match(num)) {
+    // clear out initial 0 in calculator before displaying user entries
     if (entry.innerHTML === 0 || entry.innerHTML === '0') {
       entry.innerHTML = '';
     }
@@ -40,6 +41,12 @@ function updateDisplay() {
 function calculate(arr) {
   entry.innerHTML = eval(track.join(''));
   history.innerHTML = '';
+  // clear out variables used to track entries
+  temp = '';
+  track = [];
+  // keep calculated value in case user decides to chain more operations
+  temp += entry.innerHTML;
+  track.push(entry.innerHTML);
 }
 
 function newData() {
@@ -51,6 +58,7 @@ function newData() {
 
 function operator(e) {
   const op = e.target.value;
+  // check if user entered 2 operators in a row
   if (
     track[track.length - 1] == opList[0] ||
     track[track.length - 1] == opList[1] ||
@@ -58,6 +66,7 @@ function operator(e) {
     track[track.length - 1] == opList[3] ||
     track[track.length - 1] == opList[4]
   ) {
+    // replace first operator with second entry
     track[track.length - 1] = op;
   } else {
     track.push(op);
